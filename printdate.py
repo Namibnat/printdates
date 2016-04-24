@@ -29,7 +29,7 @@ def determine_format():
         format = "euro"
     return format
 
-class print_dates:
+class Print_dates:
     def __init__(self, format, start_date, end_date):
         self.format = format
         self.start_date = start_date
@@ -56,9 +56,8 @@ if __name__ == "__main__":
         print("End date")
         end_date = getdate()
         if end_date > start_date:
-            pdate = print_dates(format, start_date, end_date)
+            pdate = Print_dates(format, start_date, end_date)
             pdate.p_routine()
         else:
             print("The dates you entered are not correct")
-
 
