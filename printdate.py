@@ -50,7 +50,10 @@ if __name__ == "__main__":
         start_date = getdate()
         print("End date")
         end_date = getdate()
-        pdate = print_dates(format, start_date, end_date)
-        pdate.p_routine()
+        if end_date > start_date:
+            pdate = print_dates(format, start_date, end_date)
+            pdate.p_routine()
+        else:
+            print("The dates you entered are not correct")
 
 
