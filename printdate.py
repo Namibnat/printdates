@@ -6,15 +6,20 @@ import os
 
 
 def getdate():
-    print("Input the year", end="")
+    """Get the dates from user input, output a datetime object
+
+    TODO:  More error checking
+    """
+    print("year", end="")
     year = int(input(" "))
-    print("Input the month", end="")
+    print("month", end="")
     month = int(input(" "))
-    print("Input the day of the month", end="")
+    print("day", end="")
     day = int(input(" "))
     return datetime.datetime(year, month, day)
 
 def determine_format():
+    """To distinguish between the US and European for of dates"""
     if len(sys.argv) > 1:
         format = sys.argv[1]
         if format not in ["euro", "usa"]:
