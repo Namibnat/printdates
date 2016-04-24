@@ -2,14 +2,15 @@
 
 import datetime
 import sys
+import os
 
 
 def getdate():
-    print("Input the year")
+    print("Input the year", end="")
     year = int(input(" "))
-    print("Input the month")
+    print("Input the month", end="")
     month = int(input(" "))
-    print("Input the day of the month")
+    print("Input the day of the month", end="")
     day = int(input(" "))
     return datetime.datetime(year, month, day)
 
@@ -37,6 +38,7 @@ class print_dates:
 
     def p_routine(self):
         date = self.start_date
+        os.system("clear")
         while date <= self.end_date:
             self.printit(date)
             date += datetime.timedelta(days=1)
