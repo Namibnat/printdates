@@ -18,6 +18,7 @@ def getdate():
     day = int(input(" "))
     return datetime.datetime(year, month, day)
 
+
 def determine_format():
     """To distinguish between the US and European for of dates"""
     if len(sys.argv) > 1:
@@ -28,6 +29,7 @@ def determine_format():
     else:
         format = "euro"
     return format
+
 
 class Print_dates:
     def __init__(self, format, start_date, end_date):
@@ -60,4 +62,3 @@ if __name__ == "__main__":
             pdate.p_routine()
         else:
             print("The dates you entered are not correct")
-
